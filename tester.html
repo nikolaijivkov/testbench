@@ -1,45 +1,409 @@
-<html>
-
-<style>
-
-#rotato {
-	position: absolute;
-	left: 100px;
-	top: 100px;
-	width: 80px;
-	height: 80px;
-	background-color: red;
-	animation: rotato_kfs 5s 1;
-	-webkit-clip-path: circle(30px at 35px 35px);
+<!DOCTYPE html>
+<html lang="en" id="scene">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style id="coui_animations_block">
+body{
+	overflow: hidden !important;
 }
 
-#text {
-	color: transparent;
-	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+@font-face {
+    font-family: font1;
+    src: url(../fonts/Exo2-SemiBoldItalic.ttf);
 }
 
-@keyframes rotato_kfs {
-	from {
-		transform: rotateX(10deg);
-	}
-	to {
-		transform: rotateX(50deg);
-	}
+#coui_77890_19 {
+	animation-iteration-count: infinite, infinite, infinite !important;
 }
 
+#coui_47329_19, #coui_50062_20, #coui_63809_21, #coui_63259_22{
+    animation-iteration-count: infinite, infinite !important;
+}
+
+#red {
+    animation-iteration-count: infinite, infinite !important;
+}
+
+#coui_23436_18{
+	animation-iteration-count: infinite !important;
+}
+
+#coui_628_13{
+	background: -webkit-linear-gradient(left, rgba(89,191,76,1) 0%,rgba(141,221,168,1) 100%) !important;
+}
+
+
+#coui_88495_14{
+	background: -webkit-linear-gradient(left, rgba(44,175,227,1) 0%,rgba(151,212,237,1) 100%) !important;
+}
+
+
+
+
+#rightHover {
+    animation-iteration-count: infinite, infinite !important;
+}
+
+#leftHover {
+    animation-iteration-count: infinite, infinite !important;
+}
+
+#healthContainer{
+	-webkit-transform: perspective(50vh) rotateZ(-5deg);
+}
+
+#minmapContainer{
+	-webkit-transform: perspective(50vh) rotateZ(3deg);
+}
+
+#ammoContainer{
+	-webkit-transform: perspective(50vh) rotateY(5deg) rotateZ(5deg) rotateY(-5deg)
+}
+
+#titleContainer{
+	-webkit-transform: perspective(50vh) rotateY(-5deg) rotateZ(-5deg) rotateY(5deg);
+	width: 40vmin !important;
+	height: 8vmin !important;
+}
+
+#titles{
+	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)) !important;
+
+}
+
+#title1, #title2, #title3{
+    font-family: font1;
+	font-size: 1.9vmin !important;
+	animation-iteration-count: infinite, infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Animations Start */
+#minmapContainer {
+animation-fill-mode: forwards;
+animation-name: geometry_top_minmapContainer, geometry_left_minmapContainer;
+animation-duration: 200ms, 300ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_minmapContainer{
+0%   { top: -22.11250729031033vh; }
+100%   { top: 5vh; }
+}
+ @-webkit-keyframes geometry_left_minmapContainer{
+0%   { left: 11vw; }
+66.66666666666666%   { left: 11vw; }
+100%   { left: 5vw; }
+}
+ #titleContainer {
+animation-fill-mode: forwards;
+animation-name: geometry_top_titleContainer, geometry_left_titleContainer;
+animation-duration: 200ms, 300ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_titleContainer{
+0%   { top: -24.007716002287687vh; }
+100%   { top: 5vh; }
+}
+ @-webkit-keyframes geometry_left_titleContainer{
+0%   { left: 73vw; }
+66.66666666666666%   { left: 73vw; }
+100%   { left: 84.57812627156576vw; }
+}
+ #ammoContainer {
+animation-fill-mode: forwards;
+animation-name: geometry_top_ammoContainer, geometry_left_ammoContainer;
+animation-duration: 200ms, 300ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_ammoContainer{
+0%   { top: 110vh; }
+100%   { top: 87vh; }
+}
+ @-webkit-keyframes geometry_left_ammoContainer{
+0%   { left: 62vw; }
+66.66666666666666%   { left: 62vw; }
+100%   { left: 67.58689880371094vw; }
+}
+ #healthContainer {
+animation-fill-mode: forwards;
+animation-name: geometry_top_healthContainer, geometry_left_healthContainer;
+animation-duration: 200ms, 300ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_healthContainer{
+0%   { top: 110vh; }
+100%   { top: 87vh; }
+}
+ @-webkit-keyframes geometry_left_healthContainer{
+0%   { left: 11vw; }
+66.66666666666666%   { left: 11vw; }
+100%   { left: 5vw; }
+}
+ #coui_628_13 {
+animation-fill-mode: forwards;
+animation-name: geometry_width_coui_628_13;
+animation-duration: 500ms;
+animation-timing-function: linear;
+animation-delay: 0ms;
+animation-iteration-count: 1;
+animation-direction: normal;
+}@-webkit-keyframes geometry_width_coui_628_13{
+0%   { width: 10%; }
+60%   { width: 10%; }
+100%   { width: 50%; }
+}
+ #coui_88495_14 {
+animation-fill-mode: forwards;
+animation-name: geometry_width_coui_88495_14;
+animation-duration: 600ms;
+animation-timing-function: linear;
+animation-delay: 0ms;
+animation-iteration-count: 1;
+animation-direction: normal;
+}@-webkit-keyframes geometry_width_coui_88495_14{
+0%   { width: 10%; }
+66.66666666666666%   { width: 10%; }
+100%   { width: 50%; }
+}
+ #coui_77890_19 {
+animation-fill-mode: forwards;
+animation-name: geometry_top_coui_77890_19, geometry_left_coui_77890_19, transform_rotate_coui_77890_19;
+animation-duration: 5300ms, 5300ms, 5300ms;
+animation-timing-function: linear, linear, linear;
+animation-delay: 0ms, 0ms, 0ms;
+animation-iteration-count: 1, 1, 1;
+animation-direction: normal, normal, normal;
+}@-webkit-keyframes geometry_top_coui_77890_19{
+0%   { top: 71.35135135135135%; }
+28.30188679245283%   { top: 15.675675675675677%; }
+92.45283018867924%   { top: 71.35135135135135%; }
+100%   { top: 71.35135135135135%; }
+}
+ @-webkit-keyframes geometry_left_coui_77890_19{
+0%   { left: 66.09442060085837%; }
+28.30188679245283%   { left: 15.021459227467812%; }
+92.45283018867924%   { left: 66.09442060085837%; }
+100%   { left: 66.09442060085837%; }
+}
+ @-webkit-keyframes transform_rotate_coui_77890_19{
+0%   { transform: rotate(-45.1759308301764deg); }
+28.30188679245283%   { transform: rotate(-45.1759308301764deg); }
+33.9622641509434%   { transform: rotate(152.8deg); }
+92.45283018867924%   { transform: rotate(120.2deg); }
+100%   { transform: rotate(-45.1759308301764deg); }
+}
+ #red {
+animation-fill-mode: forwards;
+animation-name: geometry_top_red, geometry_left_red;
+animation-duration: 6500ms, 6500ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_red{
+0%   { top: 9.289617486338798%; }
+38.46153846153847%   { top: 9.289617486338798%; }
+76.92307692307693%   { top: 69.94535519125684%; }
+100%   { top: 9.289617486338798%; }
+}
+ @-webkit-keyframes geometry_left_red{
+0%   { left: 60.60606060606061%; }
+38.46153846153847%   { left: 60.60606060606061%; }
+76.92307692307693%   { left: 32.900432900432904%; }
+100%   { left: 60.60606060606061%; }
+}
+ #coui_23436_18 {
+animation-fill-mode: forwards;
+animation-name: transform_rotate_coui_23436_18;
+animation-duration: 6500ms;
+animation-timing-function: linear;
+animation-delay: 0ms;
+animation-iteration-count: 1;
+animation-direction: normal;
+}@-webkit-keyframes transform_rotate_coui_23436_18{
+0%   { transform: rotate(-32.40003230603194deg); }
+35.38461538461539%   { transform: rotate(-32.40003230603194deg); }
+36.92307692307693%   { transform: rotate(-146.54136139863462deg); }
+78.46153846153847%   { transform: rotate(-146.54136139863462deg); }
+81.53846153846153%   { transform: rotate(-32.40003230603194deg); }
+84.61538461538461%   { transform: rotate(42.800245497499745deg); }
+96.92307692307692%   { transform: rotate(42.800245497499745deg); }
+100%   { transform: rotate(-141deg); }
+}
+ #rightHover {
+animation-fill-mode: forwards;
+animation-name: geometry_left_rightHover, -webkit-filter_filterProperties_rightHover;
+animation-duration: 6700ms, 6700ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_left_rightHover{
+0%   { left: -32.38095238095238%; }
+91.04477611940298%   { left: -5%; }
+98.50746268656717%   { left: 105%; }
+100%   { left: 105%; }
+}
+ @-webkit-keyframes -webkit-filter_filterProperties_rightHover{
+0%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+89.55223880597015%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+91.04477611940298%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(1); }
+100%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+}
+ #leftHover {
+animation-fill-mode: forwards;
+animation-name: geometry_left_leftHover, -webkit-filter_filterProperties_leftHover;
+animation-duration: 6700ms, 6700ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_left_leftHover{
+0%   { left: -12.4282982791587%; }
+22.388059701492537%   { left: -12.4282982791587%; }
+31.343283582089555%   { left: 79%; }
+32.83582089552239%   { left: 79%; }
+100%   { left: 80%; }
+}
+ @-webkit-keyframes -webkit-filter_filterProperties_leftHover{
+0%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+22.388059701492537%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+23.88059701492537%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(1); }
+31.343283582089555%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(1); }
+32.83582089552239%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+100%   { -webkit-filter: blur(0px) grayscale(0) sepia(0) brightness(1) contrast(1) hue-rotate(0deg) invert(0) saturate(1) opacity(0); }
+}
+ #title3 {
+animation-fill-mode: forwards;
+animation-name: geometry_top_title3, geometry_left_title3;
+animation-duration: 6400ms, 6400ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_title3{
+0%   { top: 75%; }
+57.8125%   { top: 75%; }
+59.375%   { top: -30%; }
+60.9375%   { top: -30%; }
+62.5%   { top: 26%; }
+78.125%   { top: 26%; }
+79.6875%   { top: 51%; }
+95.3125%   { top: 51%; }
+96.875%   { top: 77%; }
+100%   { top: 77%; }
+}
+ @-webkit-keyframes geometry_left_title3{
+0%   { left: 0%; }
+54.6875%   { left: 0%; }
+56.25%   { left: 100%; }
+57.8125%   { left: 100%; }
+59.375%   { left: 100%; }
+60.9375%   { left: 0%; }
+100%   { left: 0%; }
+}
+ #title2 {
+animation-fill-mode: forwards;
+animation-name: geometry_top_title2, geometry_left_title2;
+animation-duration: 6400ms, 6400ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_title2{
+0%   { top: 51%; }
+54.6875%   { top: 51%; }
+56.25%   { top: 76%; }
+71.875%   { top: 76%; }
+73.4375%   { top: -30%; }
+75%   { top: -30%; }
+76.5625%   { top: 0%; }
+78.125%   { top: 0%; }
+79.6875%   { top: 26%; }
+95.3125%   { top: 26%; }
+96.875%   { top: 51%; }
+100%   { top: 51%; }
+}
+ @-webkit-keyframes geometry_left_title2{
+0%   { left: 0%; }
+70.3125%   { left: 0%; }
+71.875%   { left: 100%; }
+73.4375%   { left: 100%; }
+75%   { left: 0%; }
+100%   { left: 0%; }
+}
+ #title1 {
+animation-fill-mode: forwards;
+animation-name: geometry_top_title1, geometry_left_title1;
+animation-duration: 6400ms, 6400ms;
+animation-timing-function: linear, linear;
+animation-delay: 0ms, 0ms;
+animation-iteration-count: 1, 1;
+animation-direction: normal, normal;
+}@-webkit-keyframes geometry_top_title1{
+0%   { top: 26%; }
+54.6875%   { top: 26%; }
+56.25%   { top: 51%; }
+78.125%   { top: 51%; }
+79.6875%   { top: 77%; }
+95.3125%   { top: 77%; }
+96.875%   { top: -30%; }
+98.4375%   { top: -30%; }
+100%   { top: 26%; }
+}
+ @-webkit-keyframes geometry_left_title1{
+0%   { left: 0%; }
+93.75%   { left: 0%; }
+95.3125%   { left: 100%; }
+96.875%   { left: 100%; }
+98.4375%   { left: 0%; }
+100%   { left: 0%; }
+}
+ /* CSS Animations End */
 </style>
-
+<script>
+/* Aspect Ratio Start */
+var sceneAspectRatio = '{"width": "1920px", "height": "1080px", "type": "aspectRatio16_9_full_hd"}'
+/* Aspect Ratio End */
+</script>
+<style>
+ * {
+margin: 0;
+padding: 0;
+font-family:"Helvetica Neue",Helvetica, Arial,sans-serif;
+}
+</style>
+</head>
 <body>
-
 <button onclick="location.reload();">Reload</button>
-<div id="rotato">
+<div id="minmapContainer" data-type="rectangle" data-element-type="widget" data-element-selectable="true" style="background-color: rgba(255, 255, 255, 0); font-style: inherit; font-weight: inherit; display: inline-block; border: 0px solid rgb(0, 0, 0); z-index: 0; overflow: visible; opacity: 1; position: absolute; top: 5vh; left: 11vw; width: 21.574074074074073vh; height: 17.12962962962963vh; -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;">
+  <div id="red" data-type="div" data-element-type="widget" data-element-selectable="true" style="background-color: rgba(221, 221, 221, 0); font-style: inherit; font-weight: inherit; z-index: 1; overflow: visible; opacity: 1; position: absolute; top: 9.289617486338798%; left: 60.60606060606061%; width: 17.64069264069264%; height: 17.759562841530055%; -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;">
+    <div id="coui_88778_29" data-type="circle" data-element-type="widget" data-element-selectable="true" style="background-color: rgba(255, 255, 255, 0); font-style: inherit; font-weight: inherit; display: inline-block; border-top-left-radius: 100rem; border-top-right-radius: 100rem; border-bottom-left-radius: 100rem; border-bottom-right-radius: 100rem; border: 0px solid rgb(255, 0, 0); z-index: 1; overflow: visible; opacity: 1; position: absolute; top: -3.125%; left: 5%; width: 76.31578947368422%; height: 88.81578947368422%; box-shadow: rgb(255, 0, 0) 0px 0px 12px 0px; -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;"></div>
+    <div id="coui_23436_18" data-type="responsiveImage" data-element-type="widget" data-element-selectable="true" style="font-style: inherit; font-weight: inherit; z-index: 0; overflow: visible; opacity: 1; background-image: url('images/minimapR.png'); background-size: contain; position: absolute; top: 3.125%; left: 15%; width: 56.15381366445749%; height: 87.5%; -webkit-transform: rotate(-0.5654872414927884rad); -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: 0% 0%; background-repeat: no-repeat no-repeat;"></div>
+  </div>
+  <div id="coui_77890_19" data-type="responsiveImage" data-element-type="widget" data-element-selectable="true" style="font-style: inherit; font-weight: inherit; z-index: 1; overflow: visible; opacity: 1; background-image: url('images/minimapB.png'); background-size: contain; position: absolute; top: 15.675675675675677%; left: 15.021459227467812%; width: 11.158798283261802%; height: 15.675675675675677%; -webkit-transform: rotate(-0.7884687356397935rad); -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: 0% 0%; background-repeat: no-repeat no-repeat;"></div>
+  <div id="coui_93265_0" data-type="responsiveImage" data-element-type="widget" data-element-selectable="true" style="font-style: inherit; font-weight: inherit; z-index: 0; overflow: visible; opacity: 1; background-image: url('images/minimap.png'); background-size: contain; position: absolute; top: -1.639344262295082%; left: -1.2987012987012987%; width: 100%; height: 100%; -coherent-layer-clip-aa: off; color: rgb(0, 0, 0); background-position: 0% 0%; background-repeat: no-repeat no-repeat;"></div>
 </div>
 
-<p id="text">Hello random world!</p>
-<div>
-<img src="minimap.png">
-<img src="Map_BG.png">
-</div>
 
 </body>
 </html>

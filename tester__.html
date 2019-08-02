@@ -1,0 +1,45 @@
+<html>
+
+<style>
+
+#rotato {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	width: 80px;
+	height: 80px;
+	background-color: red;
+	animation: rotato_kfs 5s 1;
+	-webkit-clip-path: circle(30px at 35px 35px);
+}
+
+#text {
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+@keyframes rotato_kfs {
+	from {
+		transform: rotateX(10deg);
+	}
+	to {
+		transform: rotateX(50deg);
+	}
+}
+
+</style>
+
+<body>
+
+<button onclick="location.reload();">Reload</button>
+<div id="rotato">
+</div>
+
+<p id="text">Hello random world!</p>
+<div>
+<img src="minimap.png">
+<img src="Map_BG.png">
+</div>
+
+</body>
+</html>
