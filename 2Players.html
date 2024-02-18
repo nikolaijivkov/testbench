@@ -66,21 +66,18 @@
         // Called when the state of the first player changes
         function onPlayer1StateChange(event) {
             if (event.data === YT.PlayerState.ENDED) {
-                // Increment the current video index and start 
-                currentVideoIndex++;
+                if (currentVideoIndex <= playlist.length) {
+                    //// Start playing the next video
+                    //player2.playVideo();
 
-                if (currentVideoIndex < playlist.length) {
                     // Hide player1
                     document.getElementById('player1').style.display = 'none';
 
                     // Show player2
                     document.getElementById('player2').style.display = 'block';
 
-                    // Start playing the next video
-                    player2.playVideo();
-
                     // Update the video ID for player1
-                    player1.cueVideoById(playlist[currentVideoIndex]);
+                    player1.cueVideoById(playlist[currentVideoIndex++]);
                 }
             }
         }
@@ -88,25 +85,42 @@
         // Called when the state of the second player changes
         function onPlayer2StateChange(event) {
             if (event.data === YT.PlayerState.ENDED) {
-                // Increment the current video index and start 
-                currentVideoIndex++;
+                if (currentVideoIndex <= playlist.length) {
+                    //// Start playing the next video
+                    //player1.playVideo();
 
-                if (currentVideoIndex >= playlist.length) {
                     // Hide player2
                     document.getElementById('player2').style.display = 'none';
 
                     // Show player1
                     document.getElementById('player1').style.display = 'block';
 
-                    // Start playing the next video
-                    player1.playVideo();
-
                     // Update the video ID for player2
-                    player2.cueVideoById(playlist[currentVideoIndex]);
+                    player2.cueVideoById(playlist[currentVideoIndex++]);
                 }
-
             }
         }
+
+        var switched = 0;
+        var playerIdx = 0
+        var transitionTime = 1;
+        setInterval(()=>{
+            // faster switching of videos
+            var players = [player1, player2];
+            var player = players[playerIdx % players.length];
+            if (!player) return;
+            var duration = player.getDuration();
+            var currentTime = player.getCurrentTime();
+            var timeToEnd = duration - currentTime;
+            // Check if the current video is close to ending and there's a next video
+            if (timeToEnd <= transitionTime && switched < playlist.length-1) {
+                switched++;
+                playerIdx++;
+                player = players[playerIdx % players.length];
+                player.playVideo();
+            }
+        }, 500);
+
     </script>
 </body>
 </html>
