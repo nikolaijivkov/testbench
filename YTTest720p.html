@@ -38,21 +38,21 @@
         <div id="noinput">
            <div id="player" style="visibility: hidden;"></div>
         </div>
-        <p id="playPauseText">Play</p>
+        <!-- <p id="playPauseText">Play</p> -->
     </div>
 
     <!-- HTML5 Audio Element for Custom Audio -->
     <audio id="customAudio" <!-- src="file://C:/test.mp3"--> preload="auto" loop></audio>
 
     <script>
-		var playlist = [
-			"1uQpw8GKjAM", //P8 M BG E3D2
-			"F-4Xo9AV9g0", //P9 M BG E2D2
-			"h5AngTovhkU", //P10 M BG E2D2
-			"CmGvkG9xHgs", //P11 M BG
-			"uQ1b04gSK2w", //P12 M BG E1D2
-			"73pu1HRQEyE", //P13 M BG E4D2
-		]; // Array of video IDs. Add more video IDs as needed.
+        var playlist = [
+            "1uQpw8GKjAM", //P8 M BG E3D2
+            "F-4Xo9AV9g0", //P9 M BG E2D2
+            "h5AngTovhkU", //P10 M BG E2D2
+            "CmGvkG9xHgs", //P11 M BG
+            "uQ1b04gSK2w", //P12 M BG E1D2
+            "73pu1HRQEyE", //P13 M BG E4D2
+        ]; // Array of video IDs. Add more video IDs as needed.
 
         // Load the YouTube IFrame API asynchronously
         var tag = document.createElement('script');
@@ -70,7 +70,6 @@
                 height: '720', //'1080',
                 playerVars: {
                     autoplay: 1,
-                    modestbranding: 1,
                     controls: 0,
                     listType: 'playlist',
                     playlist: playlist.join(',')
@@ -84,9 +83,6 @@
 
         function onPlayerReady(event) {
             player.setVolume(100);
-            //player.setPlaybackQuality(
-            //    'hd720' //'hd1080'
-            //);
         }
 
         function onPlayerStateChange(event) {
@@ -109,11 +105,11 @@
         videoWrapper.addEventListener('click', function() {
             if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
                 document.getElementById('player').style = "visibility: visible";
-                document.getElementById('playPauseText').textContent = "Pause";
+                //document.getElementById('playPauseText').textContent = "Pause";
                 player.playVideo();
             }
             else {
-                document.getElementById('playPauseText').textContent = "Play";
+                //document.getElementById('playPauseText').textContent = "Play";
                 player.pauseVideo();
             }
         });
